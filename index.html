@@ -46,16 +46,13 @@
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li>
-                            <a href="" class=""><i
-                                    class="fa-solid fa-circle-question"></i>FAQ</a>
+                            <a href="" class=""><i class="fa-solid fa-circle-question"></i>FAQ</a>
                         </li>
                         <li>
-                            <a href="" class=""><i
-                                    class="fa-solid fa-book-open"></i></i>Learn</a>
+                            <a href="" class=""><i class="fa-solid fa-book-open"></i></i>Learn</a>
                         </li>
                         <li>
-                            <a href="" class=""><i
-                                    class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</a>
+                            <a href="" class=""><i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</a>
                         </li>
                     </ul>
                 </div>
@@ -74,8 +71,7 @@
                                 class="fa-solid fa-circle-question"></i>FAQ</a>
                     </li>
                     <li>
-                        <a href="" class="btn btn-outline btn-primary"><i
-                                class="fa-solid fa-book-open"></i>Learn</a>
+                        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Learn</a>
                     </li>
                     <li>
                         <a href="" class="btn btn-outline btn-primary"><i
@@ -93,35 +89,84 @@
         <!-- left div -->
         <div class="flex-1 text-center md:text-left">
             <h1 class="text-3xl md:text-5xl font-bold mb-5"><span class="text-sky-600">English</span> is Easy!!</h1>
-            <p class="font-bangla text-xl md:text-2xl text-justify mb-10">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+            <p class="font-bangla text-xl md:text-2xl text-justify mb-10">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন।
+                আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি
+                Level এ</p>
             <form action="">
-                <input type="text" placeholder="Enter Your Name" class="input mb-5 focus:outline-none w-full md:w-1/2" />
-                <input type="password" placeholder="Enter Your Password" class="input mb-5 focus:outline-none w-full md:w-1/2"> <br>
+                <input type="text" placeholder="Enter Your Name"
+                    class="input mb-5 focus:outline-none w-full md:w-1/2" />
+                <input type="password" placeholder="Enter Your Password"
+                    class="input mb-5 focus:outline-none w-full md:w-1/2"> <br>
                 <button class="btn btn-primary w-full md:w-1/4">Get Started</button>
             </form>
         </div>
 
         <!-- right div -->
-         <div class="flex-2">
+        <div class="flex-2">
             <figure class="flex justify-end">
                 <img src="./assets/hero-student.png" alt="">
             </figure>
-         </div>
+        </div>
     </section>
 
     <!-- vocabularies section -->
-     <section class="w-11/12 mx-auto my-12">
-        <h1 class="text-3xl md:text-5xl font-bold mb-5 text-center"><span class="text-sky-600">Let's</span> Learn Vocabularies</h1>
+    <section class="w-11/12 mx-auto my-12">
+        <h1 class="text-3xl md:text-5xl font-bold mb-5 text-center"><span class="text-sky-600">Let's</span> Learn
+            Vocabularies</h1>
 
-        <!-- lessons div -->
-         <div id="lesson-container" class="flex justify-center gap-5 flex-wrap">
+        <!-- lessons container -->
+        <div id="lesson-container" class="flex justify-center gap-5 flex-wrap mt-8"></div>
+    </section>
 
-         </div>
-     </section>
+    <!-- search -->
+    <section class="flex justify-center items-center mb-12">
+        <div class="join">
+            <div>
+                <label class="input validator join-item">
+                    <input id="input-field" type="text" placeholder="Search Word Now" required />
+                </label>
+            </div>
+            <button id="search-btn" class="btn btn-neutral join-item">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </section>
+
+    <!-- spinner -->
+    <section id="spinner-container" class="flex justify-center items-center mb-12 hidden">
+        <span class="loading loading-bars loading-xl"></span>
+    </section>
+
+    <!-- word appearing section -->
+    <section id="word-card-container"
+        class="bg-gray-100 grid grid-cols-1 md:grid-cols-3 w-11/12 mx-auto rounded-xl p-4 md:p-0">
+        <!-- by default message -->
+        <div class="text-center col-span-full p-8 space-y-4 ">
+            <p class="font-bangla text-gray-400 text-xl">আপনি এখনো কোন Lesson Select করেন নি</p>
+            <p class="font-bangla text-4xl font-medium">একটি Lesson Select করুন।</p>
+        </div>
 
 
-     <!-- scripts -->
-      <script src="./scripts/index.js"></script>
+    </section>
+
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box ">
+            <div id="word-detail-container">
+
+            </div>
+
+            <div class="">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-primary ">Complete Learning</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- scripts -->
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
